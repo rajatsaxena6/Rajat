@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> My AngularJS </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <ling href="../libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="app2">
+    <div class="container" id="wrap">
+        <div ng-controller="formController">
+            <h1 align="center">
+                Bank Customers Database
+            </h1>
+            <form class="navbar-form" id="frm1" action="">
+                <center>
+                    <input type="text" class="form-control" placeholder="Search the name" id="text1" ng-model="searchvalue">
+                    <a href="#/tableTemplate" class="btn btn-default" role="button" ng-click="searchclick()">
+                        <span class="glyphicon glyphicon-search">
+
+                        </span>
+                    </a>
+                </center>
+            </form>
+            <div class="row">
+                <div id="two" align="center">
+                    <a href="#/addTemplate" class="btn btn-primary" role="button">Add</a>
+                    <a href="#/tableTemplate" class="btn btn-success" role="button" ng-click="viewclick('viewall')">ViewAll</a>
+                    <!--  <button class="btn btn-success" id="viewbutton" ng-click="viewclick()">ViewAll</button> -->
+                    <button class="btn btn-warning" id="filterbutton">Filter</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--templates load here-->
+        <div ng-view>
+        </div>
+    </div>
+    <script src="../libs/angular/angular.js"></script>
+    <script src="../libs/jquery/dist/jquery.min.js"></script>
+    <script src="js/app2.js"></script>
+    <script src="controllers/addController.js"></script>
+    <script src="controllers/tableController.js"></script>
+    <script src="js/factory.js"></script>
+    <script src="js/route.js"></script>
+    <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../libs/jasmine-core/lib/jasmine-core/jasmine-core.js"></script>
+</body>
+
+</html>

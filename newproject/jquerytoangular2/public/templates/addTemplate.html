@@ -1,0 +1,37 @@
+<div id="addTemplate">
+<form class="form-horizontal" name="addForm" novalidate>
+<center>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="inputName">Name</label>
+        <div class="col-lg-8">
+            <input class="form-control" placeholder="Name" type="text" required ng-model="bank.name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="inputEmail">Email</label>
+        <div class="col-lg-8">
+            <input class="form-control" id="inputEmail" placeholder="Email" type="email" required ng-model="bank.email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="inputphonenumber">Phone Number</label>
+        <div class="col-lg-8">
+            <input class="form-control" id="inputphno" placeholder="phonenumber" type="number" required ng-model="bank.phonenumber">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="inputAccounttype">Account Type</label>
+        <div class="col-lg-8">
+            <select id="inputaccounttype" class="form-control" ng-model="bank.accountname" required>
+                <option ng-repeat="option in options">{{option}}</option>
+            </select>
+        </div>
+    </div>
+  
+    <a href="#/tableTemplate" class="btn btn-success" role="button" type="submit" ng-click="addForm.$valid&&submitclick(bank,'add')">Submit</a>
+    
+    <a href='#/' class="btn btn-danger">Close</a>
+    
+    </center>
+</form>
+</div>

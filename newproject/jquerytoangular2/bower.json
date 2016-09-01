@@ -1,0 +1,17 @@
+{
+  "name": "jquerytoangular2",
+  "homepage": "https://github.com/rajatsaxena6/jquery2",
+  "description": "jquery to angular conversion",
+  "main": "",
+  "authors": [
+    "rajat saxena"
+  ],
+  "license": "wiprodigital",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jasmine-core": "jasmine#^2.5.0"
+  }
+}

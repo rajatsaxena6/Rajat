@@ -1,0 +1,48 @@
+<div class="row" id="row1">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered tb" id="tab01">
+                    <thead>
+                        <tr id="thead">
+                            <th ng-repeat="(key,val) in peopledata[0]">
+                                {{key}}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbdy">
+                        <!-- <template id="tmp"> -->
+                        <tr class="table-bordered" data-id="{{x.id}}" ng-repeat="x in peopledata">
+                            <td><span class="noedit accountname">{{x.accountname}}</span>
+                                <select class="edit accountname" ng-show="active==x" ng-model="x.accountname">
+                                    <option ng-repeat="option in options">{{option}}</option>
+                                </select>
+                            </td>
+                            <td><span class="noedit email">{{x.email}}</span>
+                                <input class="edit email" ng-show="active==x" ng-model="x.email" placeholder="{{x.email}}" />
+                            </td>
+                            <td>{{x.id}}</td>
+                            <td> <span class="noedit name">{{x.name}}</span>
+                                <input class="edit name" ng-show="active==x" ng-model="x.name" placeholder="{{x.name}}" />
+                            </td>
+                            <td><span class="noedit phonenumber">{{x.phonenumber}}</span>
+                                <input class="edit phonenumber" ng-show="active==x" ng-model="x.phonenumber" placeholder="{{x.phonenumber}}" />
+                            </td>
+                            <td>
+                                <button class="editorder noedit" data-toggle="tooltip" data-placement="auto" title="Edit" data-id="{{x.id}}up" ng-click="showEditRow(x)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                <button class="saveedit edit" ng-show="active==x" ng-click="update(x,x.id)">Save</button>
+                                <button class="canceledit edit" ng-show="active==x" ng-click="showEditRow(x)">Cancel</button>
+                                <button class="remove" data-id="{{x.id}}" data-toggle="tooltip" data-placement="auto" title="Delete" ng-click="deleteclick($index)" ng-model="userid"><span class="glyphicon glyphicon-trash"></span></button>
+                            </td>
+                        </tr>
+                        <!-- </template> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+        <button class="btn btn-primary pull-left" ng-hide="hidden" ng-click="prev()">Previous
+        </button>
+        <button class="btn btn-danger pull-right" ng-hide="hidden" ng-click="next()">Next
+        </button>
+    </div>
+    </div>
